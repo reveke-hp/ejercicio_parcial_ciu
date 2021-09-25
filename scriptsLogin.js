@@ -7,14 +7,16 @@ function iniciarSesion(){
 var nombre = document.getElementById("usuario")
 var password = document.getElementById("contraseña")
 
-    if(nombre.value === null || nombre.value === "" && password.value === null || password.value === ""){
+    if(nombre.value == null || nombre.value == ""){
+        validar()
+    }
+    if(password.value == null || password.value == "" ){
         validar()
     }
     else{
         window.location.href = "inicio.html"
     }
 }
-
 
 function validar(){
     var usuario = document.getElementById("usuario").value
